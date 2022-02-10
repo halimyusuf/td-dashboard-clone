@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="`d-none  d-md-flex align-item-center ${firstLink ? '' : 'ml-5'}`"
-  >
+  <div :class="`d-none d-lg-flex align-item-center ${firstLink ? '' : 'ml-5'}`">
     <div
       v-for="(link, i) in navLinks"
       :key="link.label"
