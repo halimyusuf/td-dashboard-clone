@@ -17,7 +17,7 @@
         mobile-breakpoint="0"
       >
         <template v-slot:header.data-table-select="props">
-          <v-btn @click="setSelectedHeader" icon small>
+          <v-btn @click="setSelectedHeader" icon small color="#F9F5FF">
             <custom-checkbox
               :data="props"
               :selected="selected"
@@ -28,7 +28,12 @@
         </template>
 
         <template v-slot:item.data-table-select="props">
-          <v-btn @click="() => setSelected(props.item)" icon small>
+          <v-btn
+            @click="() => setSelected(props.item)"
+            icon
+            small
+            color="#F9F5FF"
+          >
             <custom-checkbox
               :data="props"
               :selected="selected"

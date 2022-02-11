@@ -23,14 +23,14 @@
             </div>
             <!-- settings icon -->
             <div class="ml-3">
-              <v-btn icon small>
-                <v-icon>mdi-cog-outline</v-icon>
+              <v-btn icon small color="#F9F5FF">
+                <v-icon color="#667085">mdi-cog-outline</v-icon>
               </v-btn>
             </div>
             <!-- bell icon -->
             <div class="ml-3">
-              <v-btn icon small>
-                <v-icon>mdi-bell-outline</v-icon>
+              <v-btn icon small color="#F9F5FF">
+                <v-icon color="#667085">mdi-bell-outline</v-icon>
               </v-btn>
             </div>
             <!-- nav avatar -->
@@ -41,8 +41,8 @@
             </div>
           </div>
 
-          <v-btn icon class="d-md-none">
-            <v-icon>mdi-menu</v-icon>
+          <v-btn icon class="d-md-none" color="#F9F5FF">
+            <v-icon color="#667085">mdi-menu</v-icon>
           </v-btn>
         </v-app-bar>
       </v-container>
