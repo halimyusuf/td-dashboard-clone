@@ -129,20 +129,22 @@ export default {
   },
   methods: {
     setSelectedHeader() {
-      if (this.selectedAll) {
+      if (this.selected.length > 0 && !this.selectedAll) {
         this.selected = [];
       } else {
-        const ss = this.tableContent.map((a) => a.company.name);
-        for (let a of ss) {
-          this.selected.push(a);
+        if (this.selectedAll) {
+          this.selected = [];
+        } else {
+          const ss = this.tableContent.map((a) => a.company.name);
+          for (let a of ss) {
+            this.selected.push(a);
+          }
         }
+        this.selectedAll = !this.selectedAll;
       }
-      this.selectedAll = !this.selectedAll;
-      console.log(this.selected);
     },
     setSelected(item) {
       const value = this.selected.find((a) => a === item.company.name);
-      console.log(this.selected);
       if (!value) {
         this.selected.push(item.company.name);
       } else {

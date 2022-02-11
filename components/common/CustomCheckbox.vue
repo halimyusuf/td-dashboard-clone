@@ -1,6 +1,7 @@
 <template>
-  <div :class="`tick-cont ${valid ? 'ticked' : ''}`">
-    <v-icon v-if="valid" size="15" color="#7F56D9"> mdi-check </v-icon>
+  <div :class="`tick-cont ${valid || hasSelected ? 'ticked' : ''}`">
+    <v-icon v-if="hasSelected" size="15" color="#7F56D9"> mdi-minus </v-icon>
+    <v-icon v-else-if="valid" size="15" color="#7F56D9"> mdi-check </v-icon>
   </div>
 </template>
 
@@ -16,6 +17,9 @@ export default {
         this.selected.find((a) => a === this.data.item.company.name) !==
           undefined || this.selectedAll
       );
+    },
+    hasSelected() {
+      return this.header && this.selected.length > 0;
     },
   },
 };
