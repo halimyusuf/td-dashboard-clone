@@ -19,10 +19,12 @@
 
 <script>
 import CustomSearchTextField from "../common/CustomSearchTextField.vue";
+import RenderNavLinks from "./RenderNavLinks.vue";
 export default {
   props: ["setRightDrawer"],
   components: {
     CustomSearchTextField,
+    RenderNavLinks,
   },
   data() {
     return {
