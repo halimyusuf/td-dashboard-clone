@@ -4,7 +4,7 @@
       <v-container class="pa-0">
         <v-app-bar color="#fff" elevation="0">
           <v-toolbar-title>
-            <img src="../assets/Vector.svg" />
+            <img src="../../assets/Vector.svg" />
           </v-toolbar-title>
           <render-nav-links
             :nav-links="navLinks"
@@ -36,7 +36,7 @@
             <!-- nav avatar -->
             <div class="ml-3">
               <v-avatar width="40" height="40">
-                <img src="../assets/navAvatar.svg" />
+                <img src="../../assets/navAvatar.svg" />
               </v-avatar>
             </div>
           </div>
@@ -53,9 +53,9 @@
 
 <script>
 import RenderNavLinks from "./RenderNavLinks.vue";
+import NavBar2 from "./NavBar2.vue";
 export default {
-  components: { RenderNavLinks },
-  props: ["setRightDrawer"],
+  components: { RenderNavLinks, NavBar2 },
   data() {
     return {
       currentLink: null,

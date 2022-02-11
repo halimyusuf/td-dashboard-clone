@@ -1,48 +1,21 @@
 <template>
   <v-app>
-    <nav-bar :setRightDrawer="setRightDrawer" />
+    <nav-bar />
     <v-main>
       <v-container>
         <Nuxt />
       </v-container>
     </v-main>
-    <nav-drawer :rightDrawer="rightDrawer" />
+    <!-- <nav-drawer /> -->
   </v-app>
 </template>
 
 <script>
-import NavBar from "../components/NavBar.vue";
-import NavDrawer from "../components/NavDrawer.vue";
+import NavBar from "../components/navbar/NavBar.vue";
 export default {
-  components: { NavBar, NavDrawer },
+  components: { NavBar },
   name: "DefaultLayout",
-  data() {
-    return {
-      items: [
-        {
-          icon: "mdi-apps",
-          title: "Welcome",
-          to: "/",
-        },
-        {
-          icon: "mdi-chart-bubble",
-          title: "Inspire",
-          to: "/inspire",
-        },
-      ],
-      rightDrawer: false,
-      title: "Vuetify.js",
-    };
-  },
-  methods: {
-    setRightDrawer(val) {
-      if (val) {
-        this.rightDrawer = val;
-        return;
-      }
-      this.rightDrawer = !this.rightDrawer;
-    },
-  },
+  methods: {},
 };
 </script>
 

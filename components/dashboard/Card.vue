@@ -36,20 +36,20 @@
         <template v-if="increase">
           <div class="card-img-cont">
             <div class="card-img">
-              <img class="" src="../assets/Background base.svg" />
+              <img class="" src="../../assets/Background base.svg" />
             </div>
             <div class="card-img">
-              <img class="" src="../assets/IncreaseLine.svg" />
+              <img class="" src="../../assets/IncreaseLine.svg" />
             </div>
           </div>
         </template>
         <template v-else>
           <div class="card-img-cont">
             <div class="card-img">
-              <img class="" src="../assets/Background base (1).svg" />
+              <img class="" src="../../assets/Background base (1).svg" />
             </div>
             <div class="card-img">
-              <img class="" src="../assets/DecreaseLine.svg" />
+              <img class="" src="../../assets/DecreaseLine.svg" />
             </div>
           </div>
         </template>
@@ -61,9 +61,6 @@
 <script>
 export default {
   props: ["label", "value", "percentChange", "increase"],
-  data() {
-    return {};
-  },
 };
 </script>
 

@@ -1,22 +1,8 @@
 <template>
   <div class="dashboard">
-    <div class="d-flex justify-space-between flex-wrap">
-      <div class="welcome-text mb-5">
-        <div>Welcome back, Olivia</div>
-        <div>Track, manage and forecast your customers and orders.</div>
-      </div>
-      <div>
-        <v-btn outlined class="cust-btn" color="#7F56D9">
-          <v-icon color="#344054">mdi-cloud-upload-outline</v-icon>
-          <div class="ml-2 cust-btn-text">Upload</div>
-        </v-btn>
-
-        <v-btn class="cust-btn ml-2" color="#7F56D9" depressed dark>
-          <v-icon color="#fff">mdi-plus</v-icon>
-          <div class="ml-2 cust-btn-text cust-btn-text-dark">Add</div>
-        </v-btn>
-      </div>
-    </div>
+    <template>
+      <dashboard-intro />
+    </template>
 
     <div class="mt-10">
       <v-row>
@@ -38,36 +24,20 @@
 </template>
 
 <script>
-import DashboardCard from "../components/DashboardCard.vue";
-import DashboardTable from "../components/DashboardTable.vue";
+import DashboardCard from "../components/dashboard/Card.vue";
+import DashboardIntro from "../components/dashboard/Intro.vue";
+import DashboardTable from "../components/dashboard/table/index.vue";
+import cardContent from "../data/cardContent";
 export default {
   name: "IndexPage",
   components: {
     DashboardCard,
     DashboardTable,
+    DashboardIntro,
   },
   data() {
     return {
-      cards: [
-        {
-          label: "Total customers",
-          value: 2420,
-          percentChange: 40,
-          increase: true,
-        },
-        {
-          label: "Members",
-          value: 1210,
-          percentChange: 10,
-          increase: false,
-        },
-        {
-          label: "Active now",
-          value: 316,
-          percentChange: 20,
-          increase: true,
-        },
-      ],
+      cards: cardContent.cards,
     };
   },
 };
@@ -76,25 +46,6 @@ export default {
 <style>
 .dashboard {
   padding: 48px 0px 96px;
-}
-
-.welcome-text div:nth-child(1) {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 38px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #101828;
-  margin-right: 20px;
-}
-
-.welcome-text div:nth-child(2) {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #667085;
 }
 
 @media screen and (max-width: 600px) {
@@ -107,9 +58,4 @@ export default {
     padding: 32px 0px 48px;
   }
 }
-
-/* .table-ctrls {
-  display: flex;
-
-} */
 </style>

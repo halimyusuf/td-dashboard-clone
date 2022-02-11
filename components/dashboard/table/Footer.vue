@@ -33,4 +33,7 @@ export default {};
 </script>
 
 <style>
+.pagination-page {
+  color: #344054;
+}
 </style>

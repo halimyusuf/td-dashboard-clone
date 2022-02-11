@@ -44,8 +44,12 @@
 </template>
 
 <script>
+import CustomSearchTextField from "../../common/CustomSearchTextField.vue";
 export default {
   props: ["filters"],
+  components: {
+    CustomSearchTextField,
+  },
 };
 </script>
 

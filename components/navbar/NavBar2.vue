@@ -10,7 +10,7 @@
         />
         <v-spacer />
         <div class="search-cont ml-5">
-          <custom-search-text-field placeholder="Searchhh" />
+          <custom-search-text-field />
         </div>
       </v-app-bar>
     </v-container>
@@ -18,8 +18,12 @@
 </template>
 
 <script>
+import CustomSearchTextField from "../common/CustomSearchTextField.vue";
 export default {
   props: ["setRightDrawer"],
+  components: {
+    CustomSearchTextField,
+  },
   data() {
     return {
       currentLink: null,
